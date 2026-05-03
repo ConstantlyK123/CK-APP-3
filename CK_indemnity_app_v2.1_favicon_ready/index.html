@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Constantly Kiting Indemnity App</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="apple-touch-icon" href="assets/images/app-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#4b0710">
+<!-- GitHub Pages version: HTML, CSS and JS split into separate files -->
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<textarea id="officialWaiver" style="display:none">Constantly Kiting -- Indemnity & Waiver Form
+
+I, the undersigned, acknowledge and agree to the following terms as a participant in kiteboarding/kitesurfing activities facilitated by Constantly Kiting (est. 2007).
+
+1. ASSUMPTION OF RISK
+
+I understand kiteboarding is an extreme sport with inherent dangers no amount of care or instruction can fully eliminate, including physical injury, drowning, collision, equipment failure, and changing weather. I voluntarily and expressly assume all such risks.
+
+2. RELEASE OF LIABILITY
+
+To the extent permitted by the Consumer Protection Act, I release, waive, and hold harmless Constantly Kiting, its instructors, employees, and agents from all claims, damages, and expenses arising from my participation, except where caused by their gross negligence or wilful misconduct. I agree not to sue or make claims against Constantly Kiting, and if I do so in breach of this agreement, I accept liability for all resulting legal costs. Should any provision of this indemnity be found unenforceable, the remaining provisions continue in full force.
+
+3. PERSONAL DECLARATIONS
+
+I confirm that I am a competent open water swimmer; I am in good physical health with no condition that may impair my participation; I am not pregnant, nursing, or under the influence of alcohol or drugs; I have no mental impairment affecting my judgment or ability to process instruction; I accept full responsibility for any medical expenses resulting from injury during activities; I am at least 18 years of age (or a parent/legal guardian signing on behalf of a minor, in which case I waive all legal rights on behalf of myself and my minor child).
+
+4. EQUIPMENT & CONDUCT
+
+I agree to treat all equipment with care and accept financial responsibility for damage caused by my negligence or misuse; operate equipment safely so as not to endanger others or their property; follow all safety briefings and instructor guidance at all times; and acknowledge that non-compliance may result in termination of the session without refund.
+
+5. SAFETY BRIEFING ACKNOWLEDGEMENT
+
+I confirm I have received a full safety briefing, including instruction on the quick-release system and Langebaan beach and water rules. I have had the opportunity to ask questions and all have been answered to my satisfaction. I acknowledge this document was not presented to me at the last minute.
+
+6. EMERGENCY MEDICAL CONSENT
+
+In the event of injury or incapacitation, I authorise Constantly Kiting staff to seek emergency medical treatment on my behalf. My emergency contact details are provided above.
+
+7. WEATHER & CANCELLATIONS
+
+Constantly Kiting reserves the right to cancel or modify sessions due to unsafe weather or conditions without liability. Refunds or rescheduling in such cases are at the school's discretion.
+
+8. PHOTOGRAPHY, DATA & IKO CONSENT
+
+I consent to photos and video taken during sessions being used for Constantly Kiting's marketing, unless I object in writing before the session. I consent to my personal information being stored and used for session administration, safety records, and IKO certification purposes, in accordance with POPIA (Protection of Personal Information Act 4 of 2013).
+
+9. HEIRS & SEVERABILITY
+
+This agreement is binding upon me, my heirs, executors, and assigns. Should any clause be found unenforceable, the remainder of this agreement remains valid.</textarea>
+<header class="topbar">
+  <div class="nav">
+    <button id="navForm" class="active">New Form</button>
+    <button id="navRecords">Records</button>
+  </div>
+  <div class="logo" style="flex-direction:column;align-items:center;text-align:center">
+    <img src="assets/images/logo.png" onerror="this.style.display='none'" alt="logo">
+  </div>
+  <div class="nav">
+    <button id="navSettings">Settings</button>
+    <button id="navAbout">About</button><label class="mode-pill"><input id="instructorMode" type="checkbox"> Instructor mode</label>
+  </div>
+</header>
+<main class="app">
+<section id="heroBar" class="hero"><div class="hero-head" style="align-items:flex-start;text-align:left">
+  <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;flex-wrap:wrap">
+
+    <div style="display:flex;align-items:center;gap:10px">
+      
+      <div>
+        <div class="badge">Constantly Kiting Digital indemnity system</div>
+        <h1 id="heroTitle">Lessons Indemnity</h1>
+      </div>
+    </div>
+
+    <div style="text-align:right">
+      <div class="id-pill">FORM ID <span id="formId"></span></div>
+    </div>
+
+  </div>
+
+  <div class="toggle" style="justify-content:flex-start;margin-top:16px">
+    <button id="lessonBtn" class="selected">Lessons</button>
+    <button id="rentalBtn">Rental</button>
+  </div>
+</div></section>
+<div id="progressBar" class="progress"><div class="progress-head"><span>Form completion</span><span id="progressText">0%</span></div><div class="track"><div id="progressFill" class="fill"></div></div></div>
+<section id="success" class="success card"><div class="success-icon">✓</div><h1>Form saved successfully</h1><p>This indemnity form has been saved into your records.</p><div class="success-id">Form ID: <span id="savedId"></span></div><br><div class="success-actions">
+  <button id="printLast" class="primary">Print / Save PDF</button>
+  <button id="whatsappLast" class="primary whatsapp-btn">Send via WhatsApp</button>
+  <button id="emailLast" class="outline">Email Client</button>
+  <button id="startNew" class="primary">Start New Form</button>
+</div></section>
+<section id="formScreen" class="form-screen"><div class="layout">
+<section class="card"><div class="card-title"><div class="icon">👤</div><h2>Client Details</h2></div>
+<div class="repeat-client-box">
+  <label><span>Quick repeat client autofill</span><input id="repeatClientSearch" placeholder="Search previous client by name, email or phone"></label>
+  <div id="repeatClientResults" class="repeat-results"></div>
+</div>
+<div class="fields"><label><span>First Name <b class="req">*</b></span><input id="firstName"></label><label><span>Last Name <b class="req">*</b></span><input id="lastName"></label><label><span>Email <b class="req">*</b></span><input id="email" type="email"></label><label><span>Phone <b class="req">*</b></span><input id="phone"></label><label><span>Date of Birth</span><input id="dob" type="date"></label><label><span>Nationality</span><select id="nationality"></select></label><label class="full"><span>Have you been with us before?</span><select id="returnClient"><option value="">Select option</option><option>Yes</option><option>No</option></select></label><div id="guardian" class="guardian full"><div class="fields"><label><span>Parent / Guardian Name <b class="req">*</b></span><input id="guardianName"></label><label><span>Parent / Guardian Phone <b class="req">*</b></span><input id="guardianPhone"></label><label class="full"><span>Parent / Guardian Email</span><input id="guardianEmail"></label></div></div><label><span>Emergency Contact <b class="req">*</b></span><input id="emergencyName"></label><label><span>Emergency Phone <b class="req">*</b></span><input id="emergencyPhone"></label><label><span>Activity <b class="req">*</b></span><select id="activity"><option>Kitesurfing lesson</option><option>Kitesurfing rental</option><option>Wingfoil lesson</option><option>SUP / other activity</option></select></label><label><span>Date <b class="req">*</b></span><input id="lessonDate" type="date"></label><label class="full"><span>Medical Notes / Allergies</span><textarea id="medical"></textarea></label></div></section>
+<section class="card voucher-card">
+  <div class="card-title"><div class="icon">🎟️</div><h2>Voucher Redemption</h2></div>
+  <label class="voucher-enabled"><input id="voucherRedeemed" type="checkbox"> Voucher being redeemed for this session</label>
+  <div id="voucherFields" class="fields voucher-fields">
+    <label><span>Voucher Number / Code</span><input id="voucherCode" placeholder="Enter Shopify voucher code when available"></label>
+    <label><span>Voucher Value / Package</span><input id="voucherValue" placeholder="Example: 2-day lesson voucher"></label>
+    <label><span>Shopify Order Number</span><input id="voucherOrder" placeholder="Optional"></label>
+    <label><span>Redeemed By Staff Member</span><input id="voucherStaff" placeholder="Staff name"></label>
+    <label class="full"><span>Voucher Notes</span><textarea id="voucherNotes" placeholder="Optional notes, balance remaining, special conditions, etc."></textarea></label>
+  </div>
+</section>
+<section id="rentalCard" class="card rental-card"><div class="card-title"><div class="icon">🏄</div><h2>Rental Equipment Details</h2></div><div class="fields"><label><span>ID Provided</span><select id="rentalIdType"></select></label><label><span>ID Reference / Notes</span><input id="rentalIdRef"></label><label><span>Wetsuit Size</span><select id="wetsuitSize"></select></label><label><span>Board Size</span><select id="boardSize"></select></label><label><span>Kite Size</span><select id="kiteSize"></select></label><label><span>Harness Size</span><select id="harnessSize"></select></label><label class="full"><span>Equipment Notes</span><textarea id="equipmentNotes"></textarea></label></div></section>
+<section class="card"><div class="card-title"><div class="icon">✉️</div><h2>Marketing Consent</h2></div><label class="check"><input id="marketing" type="checkbox"> I agree to receive marketing emails and updates from Constantly Kiting.</label></section>
+<section class="card"><div class="card-title"><div class="icon">🛡️</div><h2>Indemnity, Waiver & Acknowledgement</h2></div><div id="waiverText" class="waiver"></div><div id="waiverReadNotice" class="waiver-read-lock">Please scroll to the bottom of the waiver before accepting.</div></section>
+<section class="card declaration-card"><div class="card-title"><div class="icon">✓</div><h2>Declarations</h2></div><label class="check"><input id="acceptTerms" type="checkbox"> I have read and understand the above and voluntarily agree to these terms.</label><label class="check"><input id="confirmInfo" type="checkbox"> I confirm that the information provided is accurate.</label><label class="check"><input id="confirmAge" type="checkbox"> I confirm I am 18 years or older, or a parent/guardian is signing on behalf of a minor.</label></section>
+<section class="card"><div class="card-title"><div class="icon">✍️</div><h2>Signature</h2></div><div class="signature-header"><strong>Client Signature <b class="req">*</b></strong><button id="clearSig" class="ghost">Clear Signature</button></div><canvas id="signature" width="900" height="300"></canvas><p class="hint">Use finger or Apple Pencil on iPad.</p><div class="form-actions"><button id="clearForm" class="outline" type="button">Clear Form</button><button id="saveForm" class="primary">Consent & Save Indemnity Form</button></div></section>
+</div></section>
+<section id="records" class="records card"><div class="card-title"><div class="icon">▣</div><h2>Password Protected Records</h2></div><p class="hint">Search saved indemnity forms by Form ID, client name, email or phone number.</p><div class="search-row"><input id="searchInput" placeholder="Search records"><button id="exportBtn" class="outline">Export Backup</button></div><div id="recordList" class="record-list"></div>
+<div class="voucher-records">
+  <div class="card-title"><div class="icon">🎟️</div><h2>Voucher Redemption Records</h2></div>
+  <p class="hint">Separate voucher redemption log for Shopify voucher tracking. Search above filters both indemnity records and voucher records.</p>
+  <button id="exportVouchersBtn" class="outline" style="margin-bottom:12px">Export Voucher Records</button>
+  <div id="voucherRecordList" class="record-list"></div>
+</div></section>
+<section id="settings" class="settings card"><div class="card-title"><div class="icon">⚙️</div><h2>Password Protected Settings</h2></div><div class="settings-grid"><div><label><span>Change records/settings password</span><input id="newPassword" type="password"></label><button id="changePassword" class="primary" style="margin-top:12px">Save New Password</button><p class="hint">Default test password: <strong>admin123</strong></p></div><div class="session-control"><label><span>Auto-lock Records & Settings after inactivity</span><select id="timeoutMinutes"><option value="1">1 minute</option><option value="3">3 minutes</option><option value="5">5 minutes</option><option value="10">10 minutes</option><option value="15">15 minutes</option></select></label><button id="saveTimeout" class="outline">Save</button></div><div class="settings-section"><h3>Printable waiver legal text</h3><p class="hint">Edit the legal wording that appears on saved records and the printable PDF waiver. Keep wording concise to help the printed form fit onto two pages.</p>
+<div class="two">
+<label><span>Lessons waiver version</span><input id="lessonWaiverVersionSetting" placeholder="Example: v1.0 - May 2026"></label>
+<label><span>Rental waiver version</span><input id="rentalWaiverVersionSetting" placeholder="Example: v1.0 - May 2026"></label>
+</div>
+<div class="two"><label><span>Lessons indemnity text</span><textarea id="lessonWaiverTextSetting"></textarea></label><label><span>Rental indemnity text</span><textarea id="rentalWaiverTextSetting"></textarea></label></div><button id="saveWaivers" class="primary" style="margin-top:12px">Save Indemnity Texts</button></div><div class="settings-section"><h3>Rental Equipment Dropdown Options</h3><p class="hint">Put one option per line.</p><div class="two"><label><span>ID Provided Options</span><textarea id="idTypeOptionsSetting"></textarea></label><label><span>Wetsuit Sizes</span><textarea id="wetsuitOptionsSetting"></textarea></label><label><span>Board Sizes</span><textarea id="boardOptionsSetting"></textarea></label><label><span>Kite Sizes</span><textarea id="kiteOptionsSetting"></textarea></label><label><span>Harness Sizes</span><textarea id="harnessOptionsSetting"></textarea></label><label><span>Extra Rental Items</span><textarea id="extraRentalOptionsSetting"></textarea></label></div><button id="saveRentalOptions" class="primary" style="margin-top:12px">Save Rental Equipment Options</button></div></div></section>
+<section id="about" class="card" style="display:none">
+  <div class="card-title"><div class="icon">ℹ️</div><h2>About Constantly Kiting</h2></div>
+  <p><strong>Constantly Kiting</strong> is one of South Africa’s leading kitesurfing schools, based in Langebaan. Established in 2007, the school has built a strong reputation for professional instruction, safety, and unforgettable experiences on the water.</p>
+  <p>The school is owned and operated by <strong>Wesley Fourie</strong>, a passionate kitesurfer and experienced instructor dedicated to growing the sport and delivering world-class training to both beginners and advanced riders.</p>
+  <p>Over the years, Constantly Kiting has trained thousands of students from around the world, offering lessons, rentals, and advanced coaching in one of the best kitesurfing locations globally.</p>
+  <hr style="margin:18px 0">
+  <h3>Contact Details</h3>
+  <p>
+    📍 Langebaan, South Africa<br>
+    📞 Phone: +27 (0) 73 071 3878<br>
+    📧 Email: info@constantlykiting.com<br>
+    🌐 Website: www.constantlykiting.com
+  </p>
+</section>
+<section id="printArea" class="print-area"></section><footer>Developed By Constantly Kiting - All rights Reserved.</footer>
+</main>
+<div id="passwordModal" class="modal"><div class="modal-card"><h2>Staff Password Required</h2><p>Records and settings are protected.</p><input id="passwordInput" type="password"><div style="display:flex;gap:10px;margin-top:14px"><button id="unlock" class="primary">Unlock</button><button id="cancelUnlock" class="outline">Cancel</button></div></div></div><div id="toast" class="toast"></div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
